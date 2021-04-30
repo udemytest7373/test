@@ -1,7 +1,10 @@
-h = { "a" => 123, "b" => 456, "c" => 789}
+require "mysql2"
 
-puts h["a"]
+host = 'mydb1.cguasa1pcjek.us-east-2.rds.amazonaws.com'
+username = 'udemy'
+password = 'Hd92D3Bz'
+database = 'ecsite'
 
-puts h["b"]
+client = Mysql2::Client.new(host: host, username: username, database: database, password: password)
 
-puts h["c"]
+puts client
